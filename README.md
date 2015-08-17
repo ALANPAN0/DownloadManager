@@ -8,4 +8,4 @@
 
 3. 支持多任务下载
 
-** 注：直接用Xcode打开XYDownloadManger.xcworkspace，有些未知的问题还需要大家多多指教~ **
+** 注：直接用Xcode打开XYDownloadManger.xcworkspace，有些未知的问题还需要大家指出~ **
