@@ -1,4 +1,4 @@
-# DownloadManger
+# DownloadManager
 
 介绍：
 
