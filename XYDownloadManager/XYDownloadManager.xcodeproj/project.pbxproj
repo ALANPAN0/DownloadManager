@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		728486CD1B82FFE70063E774 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 728486CC1B82FFE70063E774 /* main.m */; };
+		728486D01B82FFE70063E774 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 728486CF1B82FFE70063E774 /* AppDelegate.m */; };
+		728486D31B82FFE70063E774 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 728486D21B82FFE70063E774 /* ViewController.m */; };
+		728486D61B82FFE70063E774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728486D41B82FFE70063E774 /* Main.storyboard */; };
+		728486D81B82FFE70063E774 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728486D71B82FFE70063E774 /* Images.xcassets */; };
+		728486DB1B82FFE70063E774 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728486D91B82FFE70063E774 /* LaunchScreen.xib */; };
+		728486E71B82FFE70063E774 /* XYDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 728486E61B82FFE70063E774 /* XYDownloadManagerTests.m */; };
+		728486F31B8300250063E774 /* XYDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 728486F21B8300250063E774 /* XYDownloadManager.m */; };
+		A9EB53A7A9E3093FFBDE08AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E17AA6CE12E064A9E178F5 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		728486E11B82FFE70063E774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 728486BF1B82FFE70063E774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 728486C61B82FFE70063E774;
+			remoteInfo = XYDownloadManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F7543E11C065C6731400A1B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		728486C71B82FFE70063E774 /* XYDownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYDownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		728486CB1B82FFE70063E774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728486CC1B82FFE70063E774 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		728486CE1B82FFE70063E774 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		728486CF1B82FFE70063E774 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		728486D11B82FFE70063E774 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		728486D21B82FFE70063E774 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		728486D51B82FFE70063E774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		728486D71B82FFE70063E774 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		728486DA1B82FFE70063E774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		728486E01B82FFE70063E774 /* XYDownloadManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYDownloadManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		728486E51B82FFE70063E774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728486E61B82FFE70063E774 /* XYDownloadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDownloadManagerTests.m; sourceTree = "<group>"; };
+		728486F11B8300250063E774 /* XYDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDownloadManager.h; sourceTree = "<group>"; };
+		728486F21B8300250063E774 /* XYDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDownloadManager.m; sourceTree = "<group>"; };
+		D1E17AA6CE12E064A9E178F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBAD4EDE883A2D23C158D42E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		728486C41B82FFE70063E774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9EB53A7A9E3093FFBDE08AC /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		728486DD1B82FFE70063E774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		728486BE1B82FFE70063E774 = {
+			isa = PBXGroup;
+			children = (
+				728486C91B82FFE70063E774 /* XYDownloadManager */,
+				728486E31B82FFE70063E774 /* XYDownloadManagerTests */,
+				728486C81B82FFE70063E774 /* Products */,
+				84E2FDBCD77F31EE2850FBB2 /* Pods */,
+				8A23EEDBBA06AA21A30A2EBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		728486C81B82FFE70063E774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				728486C71B82FFE70063E774 /* XYDownloadManager.app */,
+				728486E01B82FFE70063E774 /* XYDownloadManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		728486C91B82FFE70063E774 /* XYDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				728486F01B83000B0063E774 /* DownloadManager */,
+				728486CE1B82FFE70063E774 /* AppDelegate.h */,
+				728486CF1B82FFE70063E774 /* AppDelegate.m */,
+				728486D11B82FFE70063E774 /* ViewController.h */,
+				728486D21B82FFE70063E774 /* ViewController.m */,
+				728486D41B82FFE70063E774 /* Main.storyboard */,
+				728486D71B82FFE70063E774 /* Images.xcassets */,
+				728486D91B82FFE70063E774 /* LaunchScreen.xib */,
+				728486CA1B82FFE70063E774 /* Supporting Files */,
+			);
+			path = XYDownloadManager;
+			sourceTree = "<group>";
+		};
+		728486CA1B82FFE70063E774 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				728486CB1B82FFE70063E774 /* Info.plist */,
+				728486CC1B82FFE70063E774 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		728486E31B82FFE70063E774 /* XYDownloadManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				728486E61B82FFE70063E774 /* XYDownloadManagerTests.m */,
+				728486E41B82FFE70063E774 /* Supporting Files */,
+			);
+			path = XYDownloadManagerTests;
+			sourceTree = "<group>";
+		};
+		728486E41B82FFE70063E774 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				728486E51B82FFE70063E774 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		728486F01B83000B0063E774 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				728486F11B8300250063E774 /* XYDownloadManager.h */,
+				728486F21B8300250063E774 /* XYDownloadManager.m */,
+			);
+			name = DownloadManager;
+			sourceTree = "<group>";
+		};
+		84E2FDBCD77F31EE2850FBB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBAD4EDE883A2D23C158D42E /* Pods.debug.xcconfig */,
+				3F7543E11C065C6731400A1B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A23EEDBBA06AA21A30A2EBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1E17AA6CE12E064A9E178F5 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		728486C61B82FFE70063E774 /* XYDownloadManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 728486EA1B82FFE70063E774 /* Build configuration list for PBXNativeTarget "XYDownloadManager" */;
+			buildPhases = (
+				D4A611CF493B14575DD52398 /* Check Pods Manifest.lock */,
+				728486C31B82FFE70063E774 /* Sources */,
+				728486C41B82FFE70063E774 /* Frameworks */,
+				728486C51B82FFE70063E774 /* Resources */,
+				98B6ACAFD9101CF0316B70EC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XYDownloadManager;
+			productName = XYDownloadManager;
+			productReference = 728486C71B82FFE70063E774 /* XYDownloadManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		728486DF1B82FFE70063E774 /* XYDownloadManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 728486ED1B82FFE70063E774 /* Build configuration list for PBXNativeTarget "XYDownloadManagerTests" */;
+			buildPhases = (
+				728486DC1B82FFE70063E774 /* Sources */,
+				728486DD1B82FFE70063E774 /* Frameworks */,
+				728486DE1B82FFE70063E774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				728486E21B82FFE70063E774 /* PBXTargetDependency */,
+			);
+			name = XYDownloadManagerTests;
+			productName = XYDownloadManagerTests;
+			productReference = 728486E01B82FFE70063E774 /* XYDownloadManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		728486BF1B82FFE70063E774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = b5m.gzy;
+				TargetAttributes = {
+					728486C61B82FFE70063E774 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					728486DF1B82FFE70063E774 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 728486C61B82FFE70063E774;
+					};
+				};
+			};
+			buildConfigurationList = 728486C21B82FFE70063E774 /* Build configuration list for PBXProject "XYDownloadManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 728486BE1B82FFE70063E774;
+			productRefGroup = 728486C81B82FFE70063E774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				728486C61B82FFE70063E774 /* XYDownloadManager */,
+				728486DF1B82FFE70063E774 /* XYDownloadManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		728486C51B82FFE70063E774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				728486D61B82FFE70063E774 /* Main.storyboard in Resources */,
+				728486DB1B82FFE70063E774 /* LaunchScreen.xib in Resources */,
+				728486D81B82FFE70063E774 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		728486DE1B82FFE70063E774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98B6ACAFD9101CF0316B70EC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4A611CF493B14575DD52398 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		728486C31B82FFE70063E774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				728486F31B8300250063E774 /* XYDownloadManager.m in Sources */,
+				728486D31B82FFE70063E774 /* ViewController.m in Sources */,
+				728486D01B82FFE70063E774 /* AppDelegate.m in Sources */,
+				728486CD1B82FFE70063E774 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		728486DC1B82FFE70063E774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				728486E71B82FFE70063E774 /* XYDownloadManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		728486E21B82FFE70063E774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 728486C61B82FFE70063E774 /* XYDownloadManager */;
+			targetProxy = 728486E11B82FFE70063E774 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		728486D41B82FFE70063E774 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				728486D51B82FFE70063E774 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		728486D91B82FFE70063E774 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				728486DA1B82FFE70063E774 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		728486E81B82FFE70063E774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		728486E91B82FFE70063E774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		728486EB1B82FFE70063E774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBAD4EDE883A2D23C158D42E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XYDownloadManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		728486EC1B82FFE70063E774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F7543E11C065C6731400A1B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XYDownloadManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		728486EE1B82FFE70063E774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XYDownloadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYDownloadManager.app/XYDownloadManager";
+			};
+			name = Debug;
+		};
+		728486EF1B82FFE70063E774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XYDownloadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XYDownloadManager.app/XYDownloadManager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		728486C21B82FFE70063E774 /* Build configuration list for PBXProject "XYDownloadManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				728486E81B82FFE70063E774 /* Debug */,
+				728486E91B82FFE70063E774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		728486EA1B82FFE70063E774 /* Build configuration list for PBXNativeTarget "XYDownloadManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				728486EB1B82FFE70063E774 /* Debug */,
+				728486EC1B82FFE70063E774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		728486ED1B82FFE70063E774 /* Build configuration list for PBXNativeTarget "XYDownloadManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				728486EE1B82FFE70063E774 /* Debug */,
+				728486EF1B82FFE70063E774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 728486BF1B82FFE70063E774 /* Project object */;
+}

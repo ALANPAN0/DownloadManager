@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="http://s.dingboshi.cn:8080/school/file/201507/resource/79e01f8be9db444291257b067ccffbc7.mp4" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-5n-66W">
+                                <rect key="frame" x="40" y="120" width="240" height="83"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Uw5-eR-Cd3"/>
+                                    <constraint firstAttribute="height" constant="83" id="gNr-Ab-OOP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jza-Ui-eQA">
+                                <rect key="frame" x="50" y="253" width="220" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="7C2-Wb-TZG"/>
+                                    <constraint firstAttribute="width" constant="220" id="i8Q-bM-MGa"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu9-Uy-eSs">
+                                <rect key="frame" x="30" y="308" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CSc-GN-s5G"/>
+                                    <constraint firstAttribute="width" constant="260" id="WjO-fF-uC4"/>
+                                </constraints>
+                                <state key="normal" title="start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gIO-ge-Bev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YL-d8-iIm">
+                                <rect key="frame" x="46" y="388" width="228" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="se8-17-tfn"/>
+                                    <constraint firstAttribute="height" constant="30" id="t3Q-gx-rWO"/>
+                                </constraints>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Ib-qo-5q7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwS-5B-VGl">
+                                <rect key="frame" x="20" y="263" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="1dc-aH-opc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="2eg-46-jNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jza-Ui-eQA" firstAttribute="top" secondItem="iyC-5n-66W" secondAttribute="bottom" constant="50" id="40L-x6-8HQ"/>
+                            <constraint firstAttribute="centerX" secondItem="iyC-5n-66W" secondAttribute="centerX" id="RT5-1D-rgF"/>
+                            <constraint firstAttribute="centerX" secondItem="uu9-Uy-eSs" secondAttribute="centerX" id="ZD5-oW-goA"/>
+                            <constraint firstItem="uu9-Uy-eSs" firstAttribute="top" secondItem="Jza-Ui-eQA" secondAttribute="bottom" constant="50" id="ZFH-5H-63l"/>
+                            <constraint firstItem="8YL-d8-iIm" firstAttribute="top" secondItem="uu9-Uy-eSs" secondAttribute="bottom" constant="50" id="b5s-8J-VbL"/>
+                            <constraint firstAttribute="centerX" secondItem="QwS-5B-VGl" secondAttribute="centerX" id="csq-2w-i9b"/>
+                            <constraint firstAttribute="centerX" secondItem="Jza-Ui-eQA" secondAttribute="centerX" id="fBQ-dN-3G8"/>
+                            <constraint firstItem="iyC-5n-66W" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="gW3-NX-ZkV"/>
+                            <constraint firstItem="QwS-5B-VGl" firstAttribute="top" secondItem="Jza-Ui-eQA" secondAttribute="bottom" constant="5" id="vK4-tu-sGh"/>
+                            <constraint firstAttribute="centerX" secondItem="8YL-d8-iIm" secondAttribute="centerX" id="wth-C7-pYD"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="progressLabel" destination="QwS-5B-VGl" id="WKR-zg-9R0"/>
+                        <outlet property="progressView" destination="Jza-Ui-eQA" id="utz-nY-CWP"/>
+                        <outlet property="urlTextView" destination="iyC-5n-66W" id="SXW-7D-1Wn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
