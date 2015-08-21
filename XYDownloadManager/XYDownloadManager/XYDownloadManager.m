@@ -9,12 +9,16 @@
 #import "XYDownloadManager.h"
 #import "AFNetworking.h"
 
+static NSString *const kCacheComponent = @"XYDownload";
 static NSString *const kOperation = @"operation";
 static NSString *const kFileName = @"fileName";
 
 @interface XYDownloadManager ()
 
 @property (nonatomic, strong) NSMutableArray *operations;
+@property (nonatomic, strong) NSMutableArray *completedOpreations;
+@property (nonatomic, strong) AFNetworkReachabilityManager *reachabilityManager;
+@property (nonatomic, assign) AFNetworkReachabilityStatus reachAbilityStatus;
 
 @end
 
@@ -24,7 +28,7 @@ static NSString *const kFileName = @"fileName";
 
 static NSString * catchPath() {
     NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *catchPath = [documentPath stringByAppendingPathComponent:@"Download"];
+    NSString *catchPath = [documentPath stringByAppendingPathComponent:kCacheComponent];
     BOOL isDir = NO;
     NSFileManager *fileManger = [NSFileManager defaultManager];
     BOOL isExist = [fileManger fileExistsAtPath:catchPath isDirectory:&isDir];
@@ -33,6 +37,14 @@ static NSString * catchPath() {
     }
     return catchPath;
 }
+
+- (AFNetworkReachabilityManager *)reachabilityManager {
+    if (!_reachabilityManager) {
+        _reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+    }
+    return _reachabilityManager;
+}
+
 
 - (NSMutableArray *)operations {
     if (!_operations) {
@@ -64,6 +76,19 @@ static NSString * catchPath() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
+        [sharedInstance.reachabilityManager startMonitoring];
+        [sharedInstance.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            sharedInstance.reachAbilityStatus = status;
+            if (status == AFNetworkReachabilityStatusNotReachable) {
+                NSLog(@"AFNetworkReachabilityStatusNotReachable!");
+                
+                for (NSDictionary *operation in sharedInstance.operations) {
+                    
+                    [(AFHTTPRequestOperation *)operation[kOperation] pause];
+                    [(AFHTTPRequestOperation *)operation[kOperation] cancel];
+                }
+            }
+        }];
     });
     return sharedInstance;
 }
@@ -73,14 +98,37 @@ static NSString * catchPath() {
                                              progress:(DownloadProgressBlock)progress
                                               success:(DownloadSuccessBlock)success
                                                  fail:(DownloadFailBlock)fail {
-    if (fileName.length == 0) {
-        NSAssert(NO, @"fileName is error!");
+    if (!fileName.length) {
+        NSAssert(NO, @"fileName is nil!");
     }
     
-    //complete path name
     NSString *filePath = [catchPath() stringByAppendingPathComponent:fileName];
+
+    BOOL opreationIsExist = NO;
+    for (NSDictionary *operation in _operations) {
+        if ([operation[kFileName] isEqualToString:fileName]) {
+            opreationIsExist = YES;
+            break;
+        }
+    }
+    
+    if (opreationIsExist) {
+        for (NSDictionary *operation in _operations) {
+            
+            if ([operation[kFileName] isEqualToString:fileName]) {
+                if ([(AFHTTPRequestOperation *)operation[kOperation] isPaused]) {
+                    [(AFHTTPRequestOperation *)operation[kOperation] cancel];
+                    [_operations removeObject:operation];
+                    break;
+                }else {
+                    return (AFHTTPRequestOperation *)operation[kOperation];
+                }
+            }
+        }
+    }
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+
     unsigned long long downloadedBytes = 0;
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         downloadedBytes = [self fileSizeOfPath:filePath];
@@ -96,16 +144,6 @@ static NSString * catchPath() {
     [[NSURLCache sharedURLCache] removeCachedResponseForRequest:request];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    for (NSDictionary *dict in _operations) {
-        
-        // cancle all tast directly
-        if ((AFHTTPRequestOperation *)dict[kOperation] && [dict[kFileName] isEqualToString:fileName]) {
-            // this sentence is the key，if not fail block will callback
-            [(AFHTTPRequestOperation *)dict[kOperation] pause];
-            [(AFHTTPRequestOperation *)dict[kOperation] cancel];
-            [_operations removeObject:dict];
-        }
-    }
     
     NSDictionary *dict = @{kFileName:fileName,
                            kOperation:operation};
